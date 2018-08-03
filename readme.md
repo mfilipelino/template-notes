@@ -3,18 +3,10 @@ Java Notes
 
 Java é uma linguagem de programação de propósito geral, concorrente, baseada em classes e orientada a objetos. 
 
-Fundamental programming structures
+Tópicos
 ------
 
-- [First program](doc/readme.md)
-- Primitive types
-- Variables
-- Arithmetic Operations
-- Strings
-- Input and output
-- Control flow
-- Array
-- Functions
+- [Fundamentos](doc/readme.md)
 
 
 [File](doc/LearnJava.java)
