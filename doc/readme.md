@@ -2,8 +2,8 @@ Fundamental programming Structures
 ----------------------------------
 
 
-- [First Program](#First Program)
-- Primitive types
+- [First Program](#first-program)
+- [Primitive types](#primitive-types)
 - Variables
 - Arithmetic Operations
 - Strings
@@ -13,8 +13,8 @@ Fundamental programming Structures
 - Functions
 
 
-First Program
--------------
+## First Program
+
 
 ```java
 public class Main {
@@ -26,8 +26,8 @@ public class Main {
 //out: Java
 ```
 
-Primitive types
----------------
+## Primitive types
+
 
 ```java
 public class Main {
