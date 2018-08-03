@@ -2,9 +2,15 @@ Fundamental programming Structures
 ----------------------------------
 
 
-- [First Program](#first-program)
-- [Primitive types](#primitive-types)
-- Variables
+1. [First Program](#first-program)
+2. [Primitive types](#primitive-types)
+3. Variables
+    1. AD
+    2. 32
+    3. 123
+    4. qweqw
+    5. qwe
+
 - Arithmetic Operations
 - Strings
 - Input and output
