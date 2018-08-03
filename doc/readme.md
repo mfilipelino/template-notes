@@ -1,25 +1,22 @@
-Fundamental programming Structures
-----------------------------------
+
+1. Fundamental Programming Structures
+    - [First Program](#first-program)
+    - [Primitive types](#primitive-types)
+    - Variables
+    - Arithmetic Operations
+    - [Strings](#string)
+    - [Input and output](#input-and-output)
+    - [Control flow](#control-flow)
+    - [Array](#array)
+    - [Functions](#functions)
+    
+2. Object Oriented Programming
+    - []    
+       
+## Fundamental programming Structures
 
 
-1. [First Program](#first-program)
-2. [Primitive types](#primitive-types)
-3. Variables
-    1. AD
-    2. 32
-    3. 123
-    4. qweqw
-    5. qwe
-
-- Arithmetic Operations
-- Strings
-- Input and output
-- Control flow
-- Array
-- Functions
-
-
-## First Program
+### First Program
 
 
 ```java
@@ -32,7 +29,7 @@ public class Main {
 //out: Java
 ```
 
-## Primitive types
+### Primitive types
 
 
 ```java
@@ -68,42 +65,7 @@ public class Main {
 }
 ```
 
-String
-------
-
-```java
-public class Main {
-    public static void main(String[] args) {
-        // criando uma string    
-        String curta = "Coloca qualquer string aqui que ta valendo";
-        
-        // concatenação
-        String longa = "Podemos concatenar strings cummpridas dessa forma "
-                + "sem quebra de linha";
-        
-        // comparação
-        String name = "Java";
-        name.equals("Scala"); // false
-        
-        // primeira letra
-        String alfabeto = "abcdefghijklmnopqrstuvxz";
-        alfabeto.charAt(0); // a
-        
-        // tamanho
-        alfabeto.length(); // 24 
-        
-        // Array char
-        String vogais = "aeiou";
-        alfabeto.toCharArray(); // {'a', 'e', 'i', 'o', 'u'}
-        
-    }
-}
-```
-
-
-Array
------
-
+### Array
 
 ```java
 public class Main {
@@ -194,6 +156,41 @@ public class Main {
   g h 
 * */ 
 ```
+
+
+### String
+
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        // criando uma string    
+        String curta = "Coloca qualquer string aqui que ta valendo";
+        
+        // concatenação
+        String longa = "Podemos concatenar strings cummpridas dessa forma "
+                + "sem quebra de linha";
+        
+        // comparação
+        String name = "Java";
+        name.equals("Scala"); // false
+        
+        // primeira letra
+        String alfabeto = "abcdefghijklmnopqrstuvxz";
+        alfabeto.charAt(0); // a
+        
+        // tamanho
+        alfabeto.length(); // 24 
+        
+        // Array char
+        String vogais = "aeiou";
+        alfabeto.toCharArray(); // {'a', 'e', 'i', 'o', 'u'}
+        
+    }
+}
+```
+
+
 
 
 
