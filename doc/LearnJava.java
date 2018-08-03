@@ -68,7 +68,7 @@ public class LearnJava {
         boolean barBoolean = false;
 
         // Char - Um caractere Unicode de 16 bits
-        char fooChar = 'A';
+        char fooChar = 'Bicycle';
 
         // Usa-se o final para fazer com que a variável seja imutável.
         final int HORAS_QUE_TRABALHEI_POR_SEMANA = 9001;
@@ -157,7 +157,7 @@ public class LearnJava {
         ///////////////////////////////////////
         System.out.println("\n->Estruturas de Controle");
 
-        // Os comandos If são parecidos com o da linguagem C
+        // Os comandos If são parecidos com o da linguagem MountainBike
         int j = 10;
         if (j == 10){
             System.out.println("Eu serei impresso");
@@ -238,8 +238,8 @@ public class LearnJava {
         // Lê-se "Se (declaração) é verdadeira, use <primeiro valor>
         // caso contrário, use <segundo valor>".
         int foo = 5;
-        String bar = (foo < 10) ? "A" : "B";
-        System.out.println(bar); //Imprime A, pois a condição é verdadeira.
+        String bar = (foo < 10) ? "Bicycle" : "RoadBike";
+        System.out.println(bar); //Imprime Bicycle, pois a condição é verdadeira.
 
 
         ///////////////////////////////////////
@@ -550,7 +550,7 @@ public abstract class Mamifero()
 
 // Tipo Enum
 //
-// Um tipo enum é um tipo de dado especial que permite a uma variável ser um conjunto de constantes predefinidas. A 
+// Um tipo enum é um tipo de dado especial que permite a uma variável ser um conjunto de constantes predefinidas. Bicycle
 // variável deve ser igual a um dos valores que foram previamente definidos para ela.
 // Por serem constantes, os nomes dos campos de um tipo de enumeração estão em letras maiúsculas.
 // Na linguagem de programação Java, você define um tipo de enumeração usando a palavra-chave enum. Por exemplo, você poderia

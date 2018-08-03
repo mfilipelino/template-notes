@@ -3,7 +3,7 @@
 - What is an Object?
     - Atributes
     - Method
-    - Encapsulamento
+    - Encapsulation
 - Class
 - Overload
 - Modificadores de acesso
@@ -19,120 +19,114 @@
 
 ![A Software object](https://docs.oracle.com/javase/tutorial/figures/java/concepts-object.gif)
 
-#### State
+#### Atributes
 > Valores que representa o estado do objeto.
 
-#### Behave
-> Funções que alteram o estado do objeto, ou permite interagir com o objeto.
+#### Methods
+> Execuções de comportamento do objeto que pode ou não mudar seu estado.
 
+#### Encapsulation
+>    Quando o estado do seu objeto só pode ser alterado atraves de comportamentos que ele implemente, chamos
+> encapsulamento.
 
 ### What is a Class?
-> Uma classe é a especificação de como é um conjunto de objetos, Uma classe é uma especificação de quais atributos e 
-> quais são os metodos que esse objeto possui, quais desses atributos e metodos são acessiveis ao mundo externo e quais
-> só podem ser acessados internamente.
+> Neste exemplo vamos especificar um modelo para objetos do tipo Carro, a forma como especificamos esse modelo é 
+> o que chamamos classe, definimos seus atibutos e comportamentos.
 
 ```java
-class Carro {
-
-    // atributos privados so podem ser acessados por métodos da classe
-    private String marca; // default = ""
-    // valor default
-    private int velocidade = 0;
-    private int aceleracaoSegundo = 30;
-    // variaveis estaticas são variaveis de classe e não de objeto.
-    private static final int freio = 10;
-
-    // construtor
-    public Carro(String marca) {
-        this.marca = marca;
-    }
-
-    // construtor overloading
-    public Carro(String marca, int aceleracaoSegundo) {
-        this.marca = marca;
-        this.aceleracaoSegundo = aceleracaoSegundo;
-    }
+class Car {
     
-    // encapsulamento 
-    public void acelerarPor(int segundos) {
-        this.velocidade += this.aceleracaoSegundo * segundos;
+    // atributes
+    int fuel = 100;
+    int consumptionPerMeter = 1;
+
+    // methods
+    void toFuel(int increasesValue) {
+        fuel = fuel + increasesValue;
     }
 
-    public void frearPor(int segundos) {
-        this.velocidade -= freio * segundos;
+    void move(int meters) {
+        fuel = fuel - meters * consumptionPerMeter;
+        if (fuel < 0) {
+            fuel = 0;
+            System.out.println("It turned out fuel");
+        }
     }
 
-    // controle de acesso
-    @Override
-    public String toString() {
-        return "Carro{" +
-                "marca='" + marca + '\'' +
-                ", velocidade=" + velocidade +
-                ", aceleracaoSegundo=" + aceleracaoSegundo +
-                '}';
+    public void printState() {
+        System.out.println("Car{" +
+                "fuel=" + fuel +
+                ", consumptionPerMeter=" + consumptionPerMeter +
+                '}');
     }
 }
 
 public class App {
-    
-    public static void main(String[] args) {
-        Carro c1 = new Carro("Honda");
-        c1.acelerarPor(3);
-        c1.frearPor(3);
-        System.out.println(c1);
 
-        Carro c2 = new Carro("Ferrari", 100);
-        c2.acelerarPor(3);
-        c2.frearPor(3);
-        System.out.println(c2);
+    public static void main(String[] args) {
+        Car car1 = new Car();
+        car1.move(80);
+        car1.toFuel(23);
+        car1.printState();
+
+        Car car2 = new Car();
+        car2.toFuel(100);
+        car2.move(300);
+        car2.printState();
+
     }
 }
 ```    
 stdout
 
-    Carro{marca='Honda', velocidade=60, aceleracaoSegundo=30}
-    Carro{marca='Ferrari', velocidade=270, aceleracaoSegundo=100}
+    Car{fuel=43, consumptionPerMeter=1}
+    It turned out fuel
+    Car{fuel=0, consumptionPerMeter=1}
 
-#### Encapsulamento 
-> Capacidade de esconder do mundo externo a complexidade do objeto, e expor apenas o néscessario para interagir com 
-> as outras partes da aplicação. 
+### What Is Inheritance?
+> Alguns objetos apresentam comportamentos semelhantes e atributos semelhantes, mais possuem caracteristicas distintas
+> que permite agrupalos em diferentes classes de objetos, para tornar comum suas partes e comportamentos semelhantes
+> temos o conceito de herança.
 
-      
-## Herança
+![A hirarchy of bicycle classes](https://docs.oracle.com/javase/tutorial/figures/java/concepts-bikeHierarchy.gif)
 
+[source](src/main/java/com/mfilipelino/app/App.java)
 ```java
-class A {
-    public A() {
-        System.out.printf("A");
+class Bicycle {
+    public Bicycle() {
+        System.out.printf("Bicycle");
     }
 }
 
-class B extends A {
-    public B() {
-        System.out.printf("-> B");
+class RoadBike extends Bicycle {
+    public RoadBike() {
+        System.out.printf("-> RoadBike");
     }
 }
 
-class C extends B {
-    public C() {
-        System.out.println("-> C");
+class MountainBike extends Bicycle {
+    public MountainBike() {
+        System.out.println("-> MountainBike");
     }
 }
 
-
+class TandemBike extends Bicycle {
+    public TandemBike() {
+        System.out.println("-> TandemBike");
+    }
+}
 
 public class App {
 
     public static void main(String[] args) {
-        new A();
+        new Bicycle();
         System.out.println();
-        new B();
+        new RoadBike();
         System.out.println();
-        new C();
+        new MountainBike();
         System.out.println();
     }
 }
-
 ```
 stdout
 
@@ -147,14 +141,14 @@ stdout
 class A {
 
     public A() {
-        System.out.println("Create A");
+        System.out.println(Bicycle);
     }
 }
 
 class B {
     private static final A a = new A();
     public B() {
-        System.out.println("Create B");
+        System.out.println(RoadBike);
     }
 }
 
