@@ -2,7 +2,7 @@ Fundamental programming Structures
 ----------------------------------
 
 
-- First program
+- [First Program](#First Program)
 - Primitive types
 - Variables
 - Arithmetic Operations
@@ -65,25 +65,39 @@ public class Main {
 String
 ------
 
-```
+```java
 public class Main {
     public static void main(String[] args) {
+        // criando uma string    
         String curta = "Coloca qualquer string aqui que ta valendo";
+        
+        // concatenação
         String longa = "Podemos concatenar strings cummpridas dessa forma "
                 + "sem quebra de linha";
-
-        System.out.println(curta);
-        System.out.println(longa);
+        
+        // comparação
+        String name = "Java";
+        name.equals("Scala"); // false
+        
+        // primeira letra
+        String alfabeto = "abcdefghijklmnopqrstuvxz";
+        alfabeto.charAt(0); // a
+        
+        // tamanho
+        alfabeto.length(); // 24 
+        
+        // Array char
+        String vogais = "aeiou";
+        alfabeto.toCharArray(); // {'a', 'e', 'i', 'o', 'u'}
+        
     }
 }
-
-// out: Coloca qualquer string aqui que ta valendo
-        Podemos concatenar strings cummpridas dessa forma sem quebra de linha
 ```
 
 
 Array
 -----
+
 
 ```java
 public class Main {
