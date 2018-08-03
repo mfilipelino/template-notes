@@ -56,11 +56,127 @@ public class Main {
         double doubleValue = 3.141512345;
 
         // unicode 16-bit
-        char character = 'c';
+        char a = 'a', b = 'b', c = 'c';
 
     }
 }
 ```
+
+String
+------
+
+```
+public class Main {
+    public static void main(String[] args) {
+        String curta = "Coloca qualquer string aqui que ta valendo";
+        String longa = "Podemos concatenar strings cummpridas dessa forma "
+                + "sem quebra de linha";
+
+        System.out.println(curta);
+        System.out.println(longa);
+    }
+}
+
+// out: Coloca qualquer string aqui que ta valendo
+        Podemos concatenar strings cummpridas dessa forma sem quebra de linha
+```
+
+
+Array
+-----
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        int n = 3;
+
+        int[] array = new int[n];
+        for(int i = 0 ; i < n; i++){
+            array[i] = 0;
+        }
+
+        int[][] array2D = new int[n][n];
+        for(int i = 0; i < n; i++){
+            for(int j = 0; j < n; j++){
+                array2D[i][j] = 1;
+            }
+        }
+
+        int[][][] array3d = new int[n][n][n];
+        for(int i = 0; i < n; i++){
+            for(int j = 0; j < n; j++){
+                for(int k = 0; k < n; k++){
+                    array3d[i][j][k] = 0;
+                }
+            }
+        }
+
+        System.out.println("1D");
+        char[] carray = {'a', 'b'};
+        for (char c : carray)
+            System.out.printf("%c ", c);
+        System.out.println();
+        System.out.println();
+
+        System.out.println("2D");
+        char[][] carray2d = {{'a', 'b'}, {'c', 'd'}}; // carray2d[2][2]
+        for (char[] ca : carray2d) {
+            for (char c : ca) {
+                System.out.printf("%c ", c);
+            }
+            System.out.println();
+        }
+        System.out.println();
+
+
+        System.out.println("3D");
+        char[][][] carray3d = {
+                {
+                        {'a', 'b'},
+                        {'c', 'd'}
+                },
+                {
+                        {'e', 'f'},
+                        {'g', 'h'}
+                }
+
+        };
+
+
+        for(char[][] ca2d : carray3d){
+            for(char[] ca: ca2d){
+                for(char c: ca){
+                    System.out.printf("%c ", c);
+                }
+                System.out.println();
+            }
+            System.out.println();
+        }
+        System.out.println();
+
+
+    }
+}
+// out:
+/* 
+* 1D
+  a b 
+  
+  2D
+  a b 
+  c d 
+  
+  3D
+  a b 
+  c d 
+  
+  e f 
+  g h 
+* */ 
+```
+
+
+
 
 
 

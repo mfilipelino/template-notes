@@ -6,7 +6,7 @@ Java é uma linguagem de programação de propósito geral, concorrente, baseada
 Fundamental programming structures
 ------
 
-- First program
+- [First program](doc/readme.md)
 - Primitive types
 - Variables
 - Arithmetic Operations
