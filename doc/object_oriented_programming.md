@@ -10,7 +10,10 @@
 - Inheritance
 - Herançca multipla
 - Nested Classes  
-    
+
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\frac{a}{b}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\frac{a}{b}" title="\frac{a}{b}" /></a> 
+
 ### What is an Object?
 
 >    Um objeto é uma forma de abstração do mundo real para uma linguagem de programação, podemos representar uma lampada
@@ -90,7 +93,6 @@ stdout
 
 ![A hirarchy of bicycle classes](https://docs.oracle.com/javase/tutorial/figures/java/concepts-bikeHierarchy.gif)
 
-[source](src/main/java/com/mfilipelino/app/App.java)
 ```java
 class Bicycle {
     public Bicycle() {
@@ -128,7 +130,7 @@ public class App {
     }
 }
 ```
-stdout
+[source](src/main/java/com/mfilipelino/app/App.java)
 
     A
     A-> B
