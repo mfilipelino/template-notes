@@ -1,14 +1,13 @@
 ## Object-Oriented Programming Concepts
     
-- What is an Object?
+- Object
     - Atributes
-    - Method
+    - Methods
     - Encapsulation
 - Class
-- Overload
-- Modificadores de acesso
 - Inheritance
-- Herançca multipla
+- Interface
+- Overload
 - Nested Classes  
 
 
@@ -130,14 +129,85 @@ public class App {
     }
 }
 ```
-[source](src/main/java/com/mfilipelino/app/App.java)
+stdout
 
     A
     A-> B
     A-> B-> C
+[source](src/main/java/com/mfilipelino/app/App.java)
      
-    
-## atribute static final
+
+### Interface
+
+> Uma interface especifica um contrato com a especificação dos métodos que a classe que o implementa deve implementar.
+
+```java
+interface IntSequence {
+    boolean hasNext();
+    int next();
+}
+
+class SquareSequence implements IntSequence {
+    private int i;
+
+    public boolean hasNext(){
+        return true;
+    }
+
+    public int next(){
+        i++;
+        return i * i;
+    }
+}
+
+
+class RandomSequence implements IntSequence {
+
+    private Random random = new Random();
+
+    public boolean hasNext(){
+        return true;
+    }
+
+    public int next(){
+        return random.nextInt();
+    }
+
+    public double getDouble(){
+        return random.nextDouble();
+    }
+
+}
+
+public class InterfaceExample {
+
+    public static double averange(IntSequence seq, int n){
+        int count = 0;
+        double sum = 0;
+        while (seq.hasNext() && count < n){
+            count++;
+            sum += seq.next();
+        }
+        return count == 0 ? 0: sum / count;
+    }
+
+    public static void main(String[] args) {
+        IntSequence sequence;
+
+        sequence = new SquareSequence();
+        double vs = averange(sequence, 5);
+        System.out.println(vs);
+
+        sequence = new RandomSequence();
+        double vr = averange(sequence, 5);
+        System.out.println(vr);
+    }
+}
+```
+
+
+
+### Atribute static final
 
 ```java
 class A {
