@@ -6,11 +6,18 @@ Java é uma linguagem de programação de propósito geral, concorrente, baseada
 Tópicos
 ------
 
-:memo:
+1. [Fundamental Programming Structures](doc/fundamental-programming-structures.md)
+    - [First Program](#first-program)
+    - [Primitive types](#primitive-types)
+    - Variables
+    - Arithmetic Operations
+    - [Strings](#string)
+    - [Input and output](#input-and-output)
+    - [Control flow](#control-flow)
+    - [Array](#array)
+    - [Functions](#functions)
 
-- :one: [Fundamentos](doc/readme.md)
-
-- [Object Oriented Programming Concepts](doc/object_oriented_programming.md)
+2. [Object Oriented Programming Concepts](doc/object_oriented_programming.md)
     - Object
         - Atributes
         - Methods
