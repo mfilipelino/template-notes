@@ -7,15 +7,15 @@ Tópicos
 ------
 
 1. [Fundamental Programming Structures](doc/fundamental-programming-structures.md)
-    - [First Program](#first-program)
-    - [Primitive types](#primitive-types)
-    - Variables
-    - Arithmetic Operations
-    - [Strings](#string)
-    - [Input and output](#input-and-output)
-    - [Control flow](#control-flow)
-    - [Array](#array)
-    - [Functions](#functions)
+    - [First Program](#first-program) - [ ]
+    - [Primitive types](#primitive-types) - [ ]
+    - Variables - [x]
+    - Arithmetic Operations - [ ]
+    - [Strings](#string) - [ ] 
+    - [Input and output](#input-and-output) - [ ]
+    - [Control flow](#control-flow) - [ ] 
+    - [Array](#array) - [ ]
+    - [Functions](#functions) - [ ]
 
 2. [Object Oriented Programming Concepts](doc/object_oriented_programming.md)
     - Object
