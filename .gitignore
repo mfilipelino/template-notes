@@ -1,3 +1,7 @@
 venv/
 .idea/
 target/
+.classpath
+.project
+.settings/
+
